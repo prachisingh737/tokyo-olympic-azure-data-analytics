@@ -1,8 +1,9 @@
-🏅 Tokyo Olympics Azure Data Engineering Project
-📌 Project Overview
+# 🏅 Tokyo Olympics Azure Data Engineering Project
+
+# 📌 Project Overview
 This project focuses on building an Azure-based data pipeline to process Tokyo Olympics data efficiently. The pipeline extracts multiple CSV files from GitHub, loads them into Azure Data Lake Storage Gen2 (ADLS Gen2) using ADF's ForEach and Copy activities, performs data transformations in Databricks, and later creates a Lake Database and tables in Azure Synapse Analytics for analysis.
 
-Technologies Used
+# Technologies Used
 Azure Data Factory (ADF) → Orchestrates the ETL pipeline
 Azure Data Lake Storage Gen2 (ADLS Gen2) → Stores raw & transformed data
 Azure Databricks → Performs data transformations
@@ -11,7 +12,7 @@ GitHub → Source for raw CSV files
 Azure Key Vault (Alternative: SAS Tokens) → Secure connection management
 
 
-Project Workflow
+# Project Workflow
 1️⃣ Data Ingestion (Using ADF)
 Used Azure Data Factory (ADF) to load multiple CSV files from GitHub into ADLS Gen2.
 Implemented a parameterized pipeline with:
@@ -27,7 +28,7 @@ Defined external tables using data stored in ADLS Gen2.
 Performed SQL-based analytics directly on Synapse.
 
 
- Challenges Faced & Solutions
+# Challenges Faced & Solutions
 Challenge	Solution Implemented
 Difficult to connect to GitHub using REST Connector in ADF	Switched to HTTP Connector to extract data from GitHub
 No access to create Azure Key Vault for secure credentials	Used SAS tokens to authenticate ADLS Gen2 in Databricks
